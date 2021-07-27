@@ -15,13 +15,14 @@ export default function Contact() {
     }
 
     function handleSubmit(e) {
+        console.log(name, email, message);
         e.preventDefault();
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", name, email, message }),
         })
-        .then(() => alert("Message sent!"))
+        .then((res) => { console.log(res); alert("Message sent!") })
         .catch((error) => alert(error));
     }
 
@@ -77,6 +78,7 @@ export default function Contact() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
                 suscipit officia aspernatur veritatis. Asperiores, aliquid?
             </p>
+            <input type="hidden" name="form-name" value="contact" />
             <div className="relative mb-4">
                 <label htmlFor="name" className="leading-7 text-sm text-gray-400">
                 Name
