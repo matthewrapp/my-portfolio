@@ -15,14 +15,24 @@ export default function Contact() {
     }
 
     function handleSubmit(e) {
-        console.log(name, email, message);
         e.preventDefault();
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", name, email, message }),
         })
-        .then((res) => { console.log(res); alert("Message sent!") })
+        .then((res) => {
+            if (res.status !== 200) {
+                alert(res.stateText);
+                return
+            } else {
+                setName('');
+                setEmail('');
+                setMessage('');
+                alert('Message Sent!');
+                return
+            }
+        })
         .catch((error) => alert(error));
     }
 
