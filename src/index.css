@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.social-svg {
+  border-radius: 0% !important;
+  /* width: 80% !important;
+  color: #fff !important; */
+}
