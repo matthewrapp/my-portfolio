@@ -131,19 +131,18 @@ export default function Contact() {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", name, email, message }),
         })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        // .then(res => {
-        //     if (res.status !== 200) {
-        //         setName("");
-        //         alert(res.statusText);
-        //         return
-        //     } else {
-        //         setName("");
-        //         alert('Message Sent!');
-        //         return
-        //     }
-        // })
+        .then(res => {
+            if (res.status !== 200) {
+                alert(res.statusText);
+                return
+            } else {
+                setName("");
+                setEmail("");
+                setMessage("");
+                alert('Message Sent!');
+                return
+            }
+        })
         .catch((error) => alert(error));
     }
 
