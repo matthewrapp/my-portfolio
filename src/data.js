@@ -107,6 +107,10 @@ export const devSkills = [
     lvl: 'good'
   },
   {
+    skill: 'Netlify',
+    lvl: 'good'
+  },
+  {
     skill: 'Git',
     lvl: 'good'
   },
