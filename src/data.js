@@ -101,7 +101,19 @@ export const devSkills = [
   {
     skill: 'MySQL',
     lvl: 'okay'
-  }
+  },
+  {
+    skill: 'Heroku',
+    lvl: 'good'
+  },
+  {
+    skill: 'Git',
+    lvl: 'good'
+  },
+  {
+    skill: 'Github',
+    lvl: 'great'
+  },
 ];
 
 export const webDesignSkills = [
