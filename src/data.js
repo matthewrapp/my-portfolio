@@ -75,6 +75,10 @@ export const devSkills = [
     lvl: 'great'
   },
   {
+    skill: 'Angular',
+    lvl: 'okay'
+  },
+  {
     skill: 'Node',
     lvl: 'great'
   },
@@ -95,11 +99,27 @@ export const devSkills = [
     lvl: 'okay'
   },
   {
+    skill: 'Swift',
+    lvl: 'okay'
+  },
+  {
     skill: 'MongoDB',
     lvl: 'great'
   },
   {
+    skill: 'Mongoose',
+    lvl: 'great'
+  },
+  {
     skill: 'MySQL',
+    lvl: 'okay'
+  },
+  {
+    skill: 'PostgreSQL',
+    lvl: 'okay'
+  },
+  {
+    skill: 'Sequelize',
     lvl: 'okay'
   },
   {
@@ -132,6 +152,10 @@ export const webDesignSkills = [
   {
     skill: 'Bootstrap',
     lvl: 'great'
+  },
+  {
+    skill: 'Material UI',
+    lvl: 'good'
   },
   {
     skill: 'React Suite',
