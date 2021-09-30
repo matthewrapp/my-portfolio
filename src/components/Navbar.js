@@ -15,7 +15,7 @@ export default function Navbar() {
           <a href="#skills" className="md:mr-5 hover:text-white">
             Skills
           </a>
-          <a href="https://drive.google.com/file/d/1bvNrZMAzQsrO1KGYPLydjVr2qKJxtHs7/view?usp=sharing" target='_blank' rel="noopener noreferrer" className="md:mr-5 hover:text-white">
+          <a href="https://drive.google.com/file/d/1_f1ieKV-5lxcC8dvL3Mmep-Q_ZKU19wF/view?usp=sharing" target='_blank' rel="noopener noreferrer" className="md:mr-5 hover:text-white">
             Resumé
           </a>
         </nav>
