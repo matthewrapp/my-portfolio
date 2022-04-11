@@ -11,9 +11,21 @@ export default function About() {
             </h1>
             <h3 className="title-font text-white text-1xl sm:text2xl mb-4">Web Full-Stack Developer</h3>
           <p className="mb-8 leading-relaxed">
-                Currently, a senior at BYU-Idaho, set to graduate in December of 2021.<br />
-                My major is Web Design & Development and minoring in Computer Science. Although I love to program, I also will graduate with a UX/UI Certificate, to help develop my eye and mind to become a Full-Stack Developer. <br /><br />
-                Side note.... this portfolio/resumé is built using React.js.
+              Currently working as a full-time software engineer for Shine Solar. 
+              December 2021, I graduated from BYU-Idaho with a major in Web Development 
+              and minor in Computer Science. I love to create software, finding ways 
+              to improve my life and the life of someone else through different 
+              technologies and software is something I enjoy. I also love to write 
+              and produce music and am currently part of an electro-pop 
+              duo <a 
+                href="https://luckycoinmusic.com" 
+                target="_blank" rel="noopener noreferrer" 
+                className="text-green-500 underline">Lucky Coin</a>. This gives me more opportunities to be creative, work with others, 
+              and strengthen my leadership and communication skills.
+
+              <br /> <br />
+
+              Side note.... this portfolio/resumé is built using React.js.
           </p>
         <div className="flex justify-center">
             <a

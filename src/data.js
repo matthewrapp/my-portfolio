@@ -61,135 +61,65 @@ export const testimonials = [
   },
 ];
 
-export const devSkills = [
-  {
-    skill: 'Javascript',
-    lvl: 'great'
-  },
-  {
-    skill: 'HTML5',
-    lvl: 'great'
-  },
-  {
-    skill: 'React',
-    lvl: 'great'
-  },
-  {
-    skill: 'Angular',
-    lvl: 'okay'
-  },
-  {
-    skill: 'Node',
-    lvl: 'great'
-  },
-  {
-    skill: 'Express',
-    lvl: 'great'
-  },
-  {
-    skill: 'EJS',
-    lvl: 'okay'
-  },
-  {
-    skill: 'Python',
-    lvl: 'good'
-  },
-  {
-    skill: 'Java',
-    lvl: 'okay'
-  },
-  {
-    skill: 'Swift',
-    lvl: 'okay'
-  },
-  {
-    skill: 'MongoDB',
-    lvl: 'great'
-  },
-  {
-    skill: 'Mongoose',
-    lvl: 'great'
-  },
-  {
-    skill: 'MySQL',
-    lvl: 'okay'
-  },
-  {
-    skill: 'PostgreSQL',
-    lvl: 'okay'
-  },
-  {
-    skill: 'Sequelize',
-    lvl: 'okay'
-  },
-  {
-    skill: 'Heroku',
-    lvl: 'good'
-  },
-  {
-    skill: 'Netlify',
-    lvl: 'good'
-  },
-  {
-    skill: 'Git',
-    lvl: 'good'
-  },
-  {
-    skill: 'Github',
-    lvl: 'great'
-  },
+export const relatedSkills = [
+  { skill: 'Javascript', lvl: 'great' },
+  { skill: 'React', lvl: 'great' },
+  { skill: 'Node', lvl: 'great' },
+  { skill: 'Express', lvl: 'great' },
+  { skill: 'Angular', lvl: 'good' },
+  { skill: 'PHP', lvl: 'good' },
+  { skill: 'Python', lvl: 'good' },
+  { skill: 'Java', lvl: 'good' },
+  { skill: 'Kotlin', lvl: 'okay' },
+  { skill: 'NoSQL', lvl: 'great' },
+  { skill: 'SQL', lvl: 'great' },
+  { skill: 'CSS3', lvl: 'great' },
+  { skill: 'SCSS/SASS', lvl: 'great' },
+  { skill: 'Boostrap', lvl: 'great' },
+  { skill: 'Material UI', lvl: 'great' },
+  { skill: 'Tailwind CSS', lvl: 'good' },
+  { skill: 'Netlify', lvl: 'great' },
+  { skill: 'AWS', lvl: 'okay' },
+  { skill: 'Google Cloud', lvl: 'okay' },
+  { skill: 'Heroku', lvl: 'good' },
+  { skill: 'Git', lvl: 'good' },
+  { skill: 'Github', lvl: 'great' },
+  // { skill: 'MongoDB', lvl: 'great' },
+  // { skill: 'Firebase', lvl: 'good' },
+  // { skill: 'DynamoDB', lvl: 'good' },
+  // { skill: 'Mongoose', lvl: 'great' },
+  // { skill: 'MySQL', lvl: 'okay' },
+  // { skill: 'PostgreSQL', lvl: 'okay' },
+  // { skill: 'Sequelize', lvl: 'okay' },
+];
+
+export const softSkills = [
+  { skill: 'Communication', lvl: 'great' },
+  { skill: 'Leadership', lvl: 'great' },
+  { skill: 'Teamwork', lvl: 'great' },
+  { skill: 'Work Ethic', lvl: 'great' },
+  { skill: 'Problem Solving', lvl: 'great' },
+  { skill: 'Attention to Detail', lvl: 'great' },
+  { skill: 'Creative Thinking', lvl: 'great' },
+  { skill: 'Time Management', lvl: 'great' },
+  { skill: 'Adaptability', lvl: 'great' },
+  { skill: 'Context-Switching', lvl: 'great' },
+];
+
+export const unrelatedSkills = [
+  { skill: 'UX/UI', lvl: 'great' },
+  { skill: 'Adobe CC & Apps', lvl: 'good' },
+  { skill: 'Audio Production', lvl: 'great' },
+  { skill: 'Songwriting', lvl: 'great' },
+  { skill: 'Wordpress', lvl: 'great' },
 ];
 
 export const webDesignSkills = [
-  {
-    skill: 'CSS3',
-    lvl: 'great'
-  },
-  {
-    skill: 'SCSS',
-    lvl: 'good'
-  },
-  {
-    skill: 'Bootstrap',
-    lvl: 'great'
-  },
-  {
-    skill: 'Material UI',
-    lvl: 'good'
-  },
-  {
-    skill: 'React Suite',
-    lvl: 'good'
-  },
-  {
-    skill: 'Tailwind CSS',
-    lvl: 'okay'
-  },
-  {
-    skill: 'Wordpress',
-    lvl: 'great'
-  },
-  // {
-  //   skill: 'Divi Web Builder',
-  //   lvl: 'great'
-  // },
-];
-
-export const uxSkills = [
-  {
-    skill: 'Adobe XD',
-    lvl: 'great'
-  },
-  {
-    skill: 'Adobe CC',
-    lvl: 'good'
-  },
-  {
-    skill: 'UX/UI Design',
-    lvl: 'great'
-  },
-  {
-    skill: 'UX/UI Testing',
-    lvl: 'good'
-  }
+  { skill: 'CSS3', lvl: 'great' },
+  { skill: 'SCSS', lvl: 'good' },
+  { skill: 'Bootstrap', lvl: 'great' },
+  { skill: 'Material UI', lvl: 'good' },
+  { skill: 'React Suite', lvl: 'good' },
+  { skill: 'Tailwind CSS', lvl: 'okay' },
+  { skill: 'Wordpress', lvl: 'great' },
 ];

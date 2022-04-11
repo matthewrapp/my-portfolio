@@ -52,7 +52,7 @@ export default function Footer() {
     <section id="footer" className='bg-gray-800'>
       <div className="container mx-auto flex px-10 py-16 md:flex-row flex-col items-center justify-center">
         <div className="lg:flex-grow flex flex-col items-center mb-16 md:mb-0 text-center xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-full">
-            <div className="flex flex-row justify-between xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-full">
+            <div className="flex flex-wrap flex-row justify-between xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-full">
                 <SocialIcon url="https://www.linkedin.com/in/matthewrapp-/" target='_blank' bgColor='transparent' fgColor='#fff' />
                 <SocialIcon url="https://github.com/matthewrapp" target='_blank' bgColor='transparent' fgColor='#fff'  />
                 <SocialIcon url="https://www.instagram.com/matthewrapp" target='_blank' bgColor='transparent' fgColor='#fff'  />

@@ -1,21 +1,31 @@
 import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
-import React from "react";
-import { devSkills, webDesignSkills, uxSkills } from "../data";
+import React, {useState} from "react";
+import { relatedSkills, softSkills, unrelatedSkills } from "../data";
 
-function skillBadges(array) {
-  return array.map((skill) => (
-      <div key={skill.skill} className="p-2 sm:w-1/3 w-full">
-        <div className="bg-gray-800 rounded flex p-3 h-full items-center">
-          <BadgeCheckIcon className={`${skill.lvl === 'great' ? 'text-green-400' : ''} ${skill.lvl === 'good' ? 'text-blue-400' : ''} ${skill.lvl === 'okay' ? 'text-yellow-400' : ''} w-6 h-6 flex-shrink-0 mr-4`} />
-          <span className="title-font font-medium text-white">
-            {skill.skill}
-          </span>
-        </div>
-      </div>
-    ))
+function skillBadges(array, index, limit) {
+  const maxToReturn = limit + index;
+  return array.map((skill, i) => {
+      if (maxToReturn > i) {
+        return (
+          <div key={i} className="p-2 sm:w-1/3 w-full">
+            <div className="bg-gray-800 rounded flex p-3 h-full items-center">
+              <BadgeCheckIcon className={`${skill.lvl === 'great' ? 'text-green-400' : ''} ${skill.lvl === 'good' ? 'text-blue-400' : ''} ${skill.lvl === 'okay' ? 'text-yellow-400' : ''} w-6 h-6 flex-shrink-0 mr-4`} />
+              <span className="title-font font-medium text-white">
+                {skill.skill}
+              </span>
+            </div>
+          </div>
+        )
+      } else return null
+  })
 }
 
 export default function Skills() {
+  const LIMIT = 6;
+  const [moreRelatedSkillsIndex, setMoreRelatedSkillsIndex] = useState(0);
+  const [moreSoftSkillsIndex, setMoreSoftSkillsIndex] = useState(0);
+  const [moreUnrelatedSkillsIndex, setMoreUnrelatedSkillsIndex] = useState(0);
+
   return (
     <section id="skills">
       <div className="container px-5 py-10 mx-auto">
@@ -43,21 +53,73 @@ export default function Skills() {
           </div>
         </div>
         <div className="lg:w-4/5 sm:mx-auto mb-6 -mx-2">
-          <h3 className="title-font text-white text-1xl sm:text2xl mb-3 pl-2">Development/Programming Skills</h3>
+          <div className="flex justify-between">
+            <h3 className="title-font text-white text-1xl sm:text2xl mb-3 pl-2">Related</h3>
+            {relatedSkills.length > moreRelatedSkillsIndex + LIMIT &&
+              <button className="inline-flex bg-transparent-500 border-0 focus:outline-none text-green-200 hover:text-green-400 rounded text-1xl sm:text2xl mb-3 px-2"
+                onClick={() => setMoreRelatedSkillsIndex(prevVal => prevVal + LIMIT)}>
+                See More Related Skills
+              </button>
+            }
+          </div>
+
           <div className="flex flex-wrap">
-            {skillBadges(devSkills)}
+            {skillBadges(relatedSkills, moreRelatedSkillsIndex, LIMIT)}
+          </div>
+
+          <div className="text-grey mt-4 text-1xl sm:text2xl text-right pr-2">
+            {relatedSkills.length <= moreRelatedSkillsIndex + LIMIT ?
+              `${relatedSkills.length} of ${relatedSkills.length} related skills showing`  : `${LIMIT + moreRelatedSkillsIndex} of ${relatedSkills.length} related skills showing`
+            }
           </div>
         </div>  
+
+        <hr style={{ width: "200px", margin: "20px auto", borderTopWidth: ".5px" }} />
+
         <div className="lg:w-4/5 sm:mx-auto mb-6 -mx-2">
-          <h3 className="title-font text-white text-1xl sm:text2xl mb-3 pl-2">Web Design Skills</h3>
-          <div className="flex flex-wrap">
-            {skillBadges(webDesignSkills)}
+          <div className="flex justify-between">
+            <h3 className="title-font text-white text-1xl sm:text2xl mb-3 pl-2">Soft</h3>
+            {softSkills.length > moreSoftSkillsIndex + LIMIT &&
+                <button className="inline-flex bg-transparent-500 border-0 focus:outline-none text-green-200 hover:text-green-400 rounded text-1xl sm:text2xl mb-3 px-2"
+                  onClick={() => setMoreSoftSkillsIndex(prevVal => prevVal + LIMIT)}>
+                  See More Soft Skills
+                </button>
+            }
           </div>
-        </div>  
-        <div className="lg:w-4/5 sm:mx-auto mb-6 -mx-2">
-          <h3 className="title-font text-white text-1xl sm:text2xl mb-3 pl-2">UX, UI & Graphic Design Skills</h3>
+
           <div className="flex flex-wrap">
-            {skillBadges(uxSkills)}
+            {skillBadges(softSkills, moreSoftSkillsIndex, LIMIT)}
+          </div>
+
+          <div className="text-grey mt-4 text-1xl sm:text2xl text-right pr-2">
+            {softSkills.length <= moreSoftSkillsIndex + LIMIT ?
+              `${softSkills.length} of ${softSkills.length} soft skills showing`  : `${LIMIT + moreSoftSkillsIndex} of ${softSkills.length} soft skills showing`
+            }
+          </div>
+        </div> 
+
+        <hr style={{ width: "200px", margin: "20px auto", borderTopWidth: ".5px" }} />
+         
+        <div className="lg:w-4/5 sm:mx-auto mb-6 -mx-2">
+          <h3 className="title-font text-white text-1xl sm:text2xl mb-3 pl-2">Unrelated</h3>
+
+          {unrelatedSkills.length > moreUnrelatedSkillsIndex + LIMIT &&
+            <div className="text-center m-auto">
+              <button className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
+                onClick={() => setMoreUnrelatedSkillsIndex(prevVal => prevVal + LIMIT)}>
+                See More Unrelated Skills
+              </button>
+            </div>
+          }
+
+          <div className="flex flex-wrap">
+            {skillBadges(unrelatedSkills, moreUnrelatedSkillsIndex, LIMIT)}
+          </div>
+
+          <div className="text-grey mt-4 text-1xl sm:text2xl text-right pr-2">
+            {unrelatedSkills.length <= moreUnrelatedSkillsIndex + LIMIT ?
+              `${unrelatedSkills.length} of ${unrelatedSkills.length} soft skills showing`  : `${LIMIT + moreUnrelatedSkillsIndex} of ${unrelatedSkills.length} soft skills showing`
+            }
           </div>
         </div>  
       </div>
