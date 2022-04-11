@@ -63,6 +63,7 @@ export const testimonials = [
 
 export const relatedSkills = [
   { skill: 'Javascript', lvl: 'great' },
+  { skill: 'Typescript', lvl: 'great' },
   { skill: 'React', lvl: 'great' },
   { skill: 'Node', lvl: 'great' },
   { skill: 'Express', lvl: 'great' },
